@@ -1,0 +1,587 @@
+/* MAIN HTML -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.row-menu{
+    position: relative;
+}
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    /* font-family: 'Marcellus', serif; */
+    font-family: 'Aleo', serif;
+}
+body{
+    /* font-family: 'Open-sans', sans-serif; */
+    font-size: 17px;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    width: 100%;
+}
+img{
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    padding-left: 10px;  
+    image-rendering: -webkit-optimize-contrast; /* chrome nie bluruje loga */
+}
+.container{
+    margin:auto; /* element zewnetrzny container marginesy automatyczne */
+}
+.primary-text{
+    color: #8AA29E; /* koloruje text w <span class="primary-text"></span> */
+}
+.primary-background{
+    background: #8AA29E; /* ustawia kolor tła */
+}
+.color-text{
+    color: #8AA29E;
+}
+.main-define{
+    text-align: left;
+    padding-left: 30px;
+}
+.students{
+    padding-left: 30px;
+}
+/* HEADER --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#main-header{
+    border-bottom: 1px solid #8AA29E; /* ustawia linie pod headerem */
+    line-height: 3em; /* wysokość nagłówka */
+    background-color: #8AA29E; /* kolor tła nagłówka */
+}
+/* NAV BAR -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#navbar{
+    text-transform:uppercase; /* ustawia wszystkie litery na dyże w menu */
+}
+#navbar li{
+    display: inline;  /* wyświetlan menu w lini */
+    padding-right: 20px; /* dodaje padding z prawej */
+    list-style: none; /* usuwa bullet pointy */
+}
+#navbar a{
+    text-decoration: none; /* usuwa podświetlnie i podkreślenie */
+    color: #000;
+}
+#navbar a{
+    -webkit-transition: color 1s ease; /* każdy link w nagłówku ma miec przejscie kolorem 1 sekundę, gładkie */
+    -moz-transition: color 1s ease;
+    -o-transition: color 1s ease;
+    transition: color 1s ease;
+}
+#navbar li.current a, #navbar a:hover{
+    color: #fff; /* kazdy link w nagłówku po najechaniu zmienia kolor na biały */
+    border-bottom: #fff 2px solid; /* pojawia się biała linia pod */
+    border-top: #fff 2px solid; /* i nad nim */
+    padding-bottom: 3px; /* lekki margines pod */
+    padding-top: 3px; /* i nad textem linku dla estetyki */
+}
+/* DROPDOWN CONTAINER --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.dropdown .fa ,.fab{
+    font-size: 40px; /* rozmiar fontu do ikony trzech kresek menu rozwijanego */
+    color: #fff; /* color biały */
+    padding-top: 40px; /* margines górny */
+}
+.dropdown {
+    display: none; /* ukryj początkowo dropdown, gdy zwykłe menu jest widoczne */
+    overflow: hidden; 
+}
+@media screen and (max-width: 1200px) { /* gdy rozmiar okna mniejszy niz 1200px */
+    #main-header .dropdown{
+        display: inline-block; /* wyswietl trzy kreski drodown w blocku */
+    }
+    #navbar {
+        display: none; /* ukryj pasek menu z linkami */
+    }
+    #main-header {
+        top: 30px; /* ustawienie wzgledem gornego marginesu strony */
+    }
+}
+.submenu{
+    left: auto; /* ustawienie z lewej i prawej */
+    right: 0;
+}
+input, ul.submenu {
+    visibility: hidden; /* przycisk input i podmenu sa ukryte */
+    opacity: 0; /* przezroczystosc na 0 */
+    position: absolute; 
+    background-color: #f9f9f9; /* color tła */
+    min-width: 150px; /* minimalna szerokosc */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* cieniowanie */
+    z-index: 1; /* ustawienie w osi z */
+}
+label{
+    visibility: visible; /* pokaz ikone kresek menu */
+    cursor: pointer; /* po najechaniu mysza zmien na łapkę kliknięcia */
+}
+ul.submenu{
+    -webkit-transition: opacity 1s ease; /* przejscie przezroczystosci trwa sekunde, gładko */
+    -moz-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+}
+input:checked~ul.submenu{ /* gdy input checked pokaz submenu*/
+    visibility: visible; 
+    opacity: 1;
+}
+input:checked~label .fa{ /* gdy input checked zmien kolor ikony na czarny */
+    color: #222;
+}
+.dropdown ul{ 
+    margin: 0;
+    padding: 5px 5px;
+    list-style: none; /* usuwa bullet pointy */
+}
+ul.submenu a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    -webkit-transition: color 1s ease, background-color 1s ease; /* przejscie koloru linku i koloru tła, gładkie, 1 sekunda */
+    -moz-transition: color 1s ease, background-color 1s ease;
+    -o-transition: color 1s ease, background-color 1s ease;
+    transition: color 1s ease, background-color 1s ease;
+}
+ul.submenu a:hover{
+    background-color: #8AA29E; /* po najechaniu zmien kolor tła i fontu */
+    color: #fff;
+}
+ul.submenu a.current:hover{
+    background-color: #8AA29E; 
+    color: #fff;
+}
+ul.submenu a.current{
+    color: #8AA29E;
+    border-bottom: 3px solid #8AA29E; /* aktualna podstrona pokazywana przez zmiane koloru i tła linku */
+    padding-bottom: 3px;
+}
+/* COMPANY -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#company{
+    background: #373a40; /* kolor tła na czarny */
+    color: #fff; /* kolor tekstu biały */
+    padding: 10px 0; /* marginesy */
+}
+#company h4{
+    text-transform: uppercase; /* dla nagłówka h4 wszystkie litery zamien na wielkie */
+    margin-bottom: 0;
+}
+#company ul{
+    padding: 0;
+    list-style: none; /* usun bullet pointy */
+    line-height: 2em;
+}
+#company .fab{
+    text-decoration: none; /* usun indykacje hiperlinku */
+    color: #F1EDEE;
+    padding-top: 0;
+    padding-left: 10px;
+    -webkit-transition: color 1s ease; /* przejscie dla koloru 1 sekunda, gladkie */
+    -moz-transition: color 1s ease;
+    -o-transition: color 1s ease;
+    transition: color 1s ease;
+}
+#company .fab:hover{ /* po najechaniu ikony .fab zmien kolor */
+    text-decoration: none;
+    color: #DB5461;
+    padding-top: 0;
+    padding-left: 10px;
+}
+#company .fa{
+    color: #F1EDEE;
+}
+#company img{
+    width: 250px; /* rozmiar zdjecia w company */
+    padding: 0;
+}
+#company .ai{
+    color: #F1EDEE;
+    font-size: 40px;
+    text-decoration: none;
+    padding-top: 0;
+    padding-left: 10px;
+    -webkit-transition: color 1s ease; /* przejscie dla koloru 1 sekunda, gladkie */
+    -moz-transition: color 1s ease;
+    -o-transition: color 1s ease;
+    transition: color 1s ease;
+}
+#company .ai:hover{
+    color: #DB5461;
+}
+/* FOOTER --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+#main-footer{ /* color i tlo dla stopki */
+    background: #8AA29E;
+    color: #000;
+}
+#main-footer a{ /* ustawienia linkow w stopce */
+    text-decoration: none;
+    color: #000;   
+    -webkit-transition: color 1s ease; /* przejscie coloru sekunda, gladkie */
+    -moz-transition: color 1s ease;
+    -o-transition: color 1s ease;
+    transition: color 1s ease;
+}
+#main-footer a:hover{ /* po najechaniu mysza zmien kolor na czarny */
+    color: #F1EDEE;
+}
+.foot{
+    width: 95%;
+    padding-left: 10px;
+}
+/* PAGE ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.pod-tytul{
+    float: left; /* pod tytuł do lewej */
+    padding-left: 10px;
+}
+.wizytowki{
+    border-bottom: 3px solid #8AA29E; /* każda wizytowka ma miec dolne obramowanie w kolorze */
+    padding-bottom: 40px;
+    padding-top: 10px;
+}
+.wizytowki p{
+    margin: 0;
+}
+#page{
+    margin-bottom: 40px; /* główna czesc strony lekko ponad company i stopka */
+    background-color: #fff; /* kolor tła */
+}
+.akapit{
+    background-color: #fff;
+}
+#page a{
+    text-decoration: none;
+    color: #DB5461;
+    -webkit-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    -o-transition: color 1s ease;
+    transition: color 1s ease;
+}
+#page a:hover{
+    color: #000; 
+}
+#page h1{
+    float: left;
+    padding-left: 10px;
+}
+#page .bucket{
+    max-height: 380px; /* maksymalny rozmiar bucket */
+    width: 100%; /* szerokość bucket to 100% diva nadrzednego */
+}
+#page .bucket h3{
+    height: 50px; /* wysokosc h3 dla kazdego bucket taka sama */
+}
+#page .fas{
+    font-size:20px;
+}
+/* ikony po najechaniu mysza zmieniaja kolor na czarny */
+/* #page .fa:hover, #page .fab:hover, #page .ai:hover, #page .tooltip .fas:hover{ 
+    color: #222; 
+} */
+.img-fluid {
+    height: 230px; /* rozmiar zdjecia kwadrat */
+    width: 230px;
+    border-radius: 50%; /* zaokroglone rogi 50% = kołko */
+    object-fit: cover; /* przytnij obraz aby pasował do rozmiaru */
+    padding-top: 0;
+    padding-left: 0;  
+}
+#page h2{
+    /* float: left; */
+    padding-left: 10px;
+}
+/* INDEX -------------------------------------------------------------------------------------------------------------*/
+.logo-index2{
+    width: 300px;
+}
+.bucket-index{
+    width: 95%;
+}
+/* SLIDESHOW --------------------------------------------------------------------------------------------------------*/
+* {box-sizing:border-box}
+* {box-sizing: border-box}
+/* body {font-family: Verdana, sans-serif; margin:0} */
+.mySlides{
+    display: none;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+}
+.mySlides img{
+    object-fit: scale-down;
+    width: 100%;
+    height: 100%;
+}
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  /* border-left: 1px solid #000; */
+  margin-top: 20px;
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.dot { /* bullet point pokazujacy, ktory slajd jest wyswietlany */
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade { /* animacja zanikania */
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+#slideshow {
+    margin: 80px auto;
+    position: relative;
+    width: 240px;
+    height: 240px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+#slideshow > div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+@media(max-width:768px){
+    .slideshow-container{
+        border-left: none;
+    }
+    .mySlides img{
+        padding: 0;
+    }
+}
+/* Groups ------------------------------------------------------------------------------------------------------------*/
+.groups h3{
+    width: 100%;
+    height: 80px;
+}
+.groups a{
+    width: 90%; 
+}
+.img-group{ /* zdjęcie grupy */
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    padding: 0;
+    object-fit: scale-down;
+    /* border: 0.5px solid #8AA29E; */
+}
+.bottom-left{ /* opcje opisu "see details" */
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    opacity: 0;
+    height: 25px;
+    width: 100px;
+    background-color: #8AA29E;
+}
+.pudeleczko{
+    position: relative;
+    width: 100%;
+    padding-top: 10px;
+}
+.container-groups:hover .img-group{
+    opacity: 0.3;
+}
+.container-groups:hover .bottom-left{
+    opacity: 1;
+    color: #fff;
+}
+.groups .wizytowki{
+    border-bottom: 3px solid #8AA29E;
+    padding-bottom: 10px;
+}
+
+/* Projects ---------------------------------------------------------------------------------------------------------*/
+.projects .wizytowki{ /* zmień własności wizytówki na stronie projects */
+    border-bottom: 1px solid #8AA29E;
+    padding-bottom: 10px;
+    text-align: left;
+    padding-left: 30px;
+}
+.projects h1{
+    max-width: 95%;
+}
+.projects .wizytowki h3, .projects .wizytowki p{
+    max-width: 95%;
+}
+/* .projects .fas{
+    color: #222;
+} */
+.projects .links{
+    padding-top: 10px;
+}
+.projects .links a{
+    padding-left: 10px;
+}
+/* PEOPLE -----------------------------------------------------------------------------------------------------------*/
+.people .links{
+    padding-top: 10px;
+}
+.people .links a{
+    padding-left: 10px;
+}
+.people h1{
+    margin-top: 0;
+}
+.people ul{
+    height: 180px;
+    text-align: left;
+    /* border-left: 1px solid #000; */
+}
+@media(max-width:768px){
+    .people ul{
+        height: 130px;
+        border-left: none;
+    }
+}
+.people h1{
+    padding-top: 30px;
+}
+@media(min-width:1200px){ /*gdy strona będzie większa niż 1200px */
+    .people .ludzik:nth-child(even){  /* do każdego parzystego elementu klasy ludzik */
+        margin-left: 80px; /* ustaw margines 80px */
+    }
+    .people .bucket{ /* dla każdego elementu bucket */
+        height: 230px; /* ustaw wysokośc na 230px, aby każda wizytowka miała ten samą wysokość */
+    }
+}
+/* CONTACT ----------------------------------------------------------------------------------------------------------*/
+.mapouter{ /* mapa google */
+    height:100%;
+    width:100%;
+    padding-top: 0;
+    /* border-left: 1px solid #000; */
+    margin-top: 20px;
+}
+.mapa{ /* mapa */
+    border: 0;
+    height: 400px;
+    width: 90%;
+}
+.bucket-contact{
+    text-align: right;
+}
+@media(max-width:761px){
+    /* .mapouter{
+        border-left: none;
+    } */
+    .bucket-contact{
+        text-align: left;
+        padding-left: 10px;
+    }
+}
+/* Tooltip container --------------------------------------------------------------------------------------------------- */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    font-size: 12px;
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 10px 5px;
+    border-radius: 6px;
+    text-decoration: none;
+    position: absolute;
+    z-index: 1;
+    min-width: 110px;
+    max-width: 800px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%); /* ustawia pudełko tak aby było na srodku */
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+/* TO TOP BUTTON --------------------------------------------------------------------------------------------------- */
+#to-top-button { /* wygląd to top button */
+    display: inline-block;
+    background-color: #333;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 75px;
+    right: 40px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    z-index: 1000;
+    text-decoration: none;
+}
+#to-top-button::after{ /* dodanie strzałki i jej koloru */
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+#to-top-button:hover { /* efekt po najechaniu myszą */
+    cursor: pointer;
+    background-color: #8AA29E;
+}
+@media screen and (max-width: 1200px) { /* gdy rozmiar ekranu mniejszy niz 1200px zmien to top button */
+    #to-top-button{
+        width: 20px;
+        height: 40px;
+        right: 20px;
+        bottom: 90px;
+    }
+    #to-top-button:after{
+        content: "\f30c"; /* zmien strzalke */
+        line-height: 40px;
+    }
+}
