@@ -459,16 +459,16 @@ ul.submenu a.current{
 .projects .links{
     padding-top: 10px;
 }
-.projects .links a{
+/* .projects .links a{
     padding-left: 10px;
-}
+} */
 /* PEOPLE -----------------------------------------------------------------------------------------------------------*/
 .people .links{
     padding-top: 10px;
 }
-.people .links a{
+/* .people .links a{
     padding-left: 10px;
-}
+} */
 .people h1{
     margin-top: 0;
 }
