@@ -41,6 +41,9 @@ img{
 .color-text{
     color: #8AA29E;
 }
+.color-accent{
+    color: #DB5461;
+}
 .main-define{
     text-align: left;
     padding-left: 30px;
