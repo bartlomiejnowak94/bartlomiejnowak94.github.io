@@ -22,13 +22,7 @@ body{
     background-color: #fff;
     width: 100%;
 }
-img{
-    width: 100%;
-    height: 100%;
-    padding-top: 10px;
-    padding-left: 10px;  
-    image-rendering: -webkit-optimize-contrast; /* chrome nie bluruje loga */
-}
+
 .container{
     margin:auto; /* element zewnetrzny container marginesy automatyczne */
 }
@@ -298,6 +292,10 @@ ul.submenu a.current{
     object-fit: cover; /* przytnij obraz aby pasował do rozmiaru */
     padding-top: 0;
     padding-left: 0;  
+}
+.img-icon {
+    height: 50px; /* rozmiar zdjecia kwadrat */
+    width: 50px;
 }
 #page h2{
     /* float: left; */
