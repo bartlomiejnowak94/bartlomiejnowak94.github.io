@@ -1,116 +1,231 @@
 <!DOCTYPE html>
-<!-- Header and navbar -->
+<!-- Header -->
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
     <title>Bartlomiej Nowak</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="css/flexboxgrid.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Aleo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/flexboxgrid.css">
     <link rel="stylesheet" href="css/academicons.min.css"/>
     <!-- JS SCRIPTS -->
-    <script src="js/DropDown.js"></script>
+    <script src="js/menu-toggle.js" defer></script>
+    <script src="js/smoothscroll.js" defer></script>
+    <!-- <script src="js/toggleMenuicon.js"></script> -->
     <script src="https://kit.fontawesome.com/5a842aaa5f.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/to-top.js"></script>
-    <link rel="icon" type="image/x-icon" href="images/green.svg">
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">        
-    <link href="https://fonts.googleapis.com/css2?family=Aleo&display=swap" rel="stylesheet">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180571576-1"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-180571576-1');
-    </script>
 </head>
 <body>
-    <!-- HEADER -->
-    <header id="main-header">
-        <div class="container">
-            <div class="row row-menu end-sm end-md end-lg center-xs middle-xs middle-sm middle-md middle-lg">
-                <div class="col-xs-7 col-sm-2 col-md-2 col-lg-2">
-                </div>
-                <div class="col-xs-5 col-sm-10 col-md-10 col-lg-10">
-                    <nav class = "navbar" id="NavBar">
-                        <a class="current" href="index.html">Home</a>
-                        <a href="research.html">Research</a>
-                        <a href="javascript:void(0);" class="icon" onclick="DropDown()"><i class = "fa fa-bars fa-lg"></i></a>
-                    </nav>
-                </div>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="title"></div>
+            <a class="toggle-button">
+                <div class="nav-icon1"><i class="nav-icon1 fas fa-bars fa-2x"></i></div>
+                <div class="nav-icon2"><i class="fa-solid fa-square-xmark fa-2x"></i></div>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="#Main" class="current">Home</a></li>
+                    <li><a href="#Publications">Publications</a></li>
+                    <li><a href="#Certificates">Certificates</a></li>
+                    <li><a href="#Presentations">Presentations</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
     </header>
-    <!-- MAIN PAGE -->
-    <section id="page" class="projects">
+    <!-- Section -->
+    <section id="Main">
         <div class="container">
-            <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <h2>Dr inż. Bartłomiej Nowak</h2>
-                    <img class="img-fluid" src="images/profiles/Bartlomiej-Nowak.jpg" alt="">
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 main-define">
-                    <h4>Research Interest</h4>
-                    <img class="logo-index2" src="images/spirale_kolor.svg" alt="agent-based-spirals">
-                    <ul>
-                        <li>Agent-based modeling</li>
-                        <li>Complex Systems</li>
-                        <li>Phase Transitions</li>
-                        <li>Statistical Physics</li>
-                    </ul>
-
+          <div class="row center-xs center-sm center-md center-lg">
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-3">
+              <div class="big-screen-title">
+                <p>Hello, I am</p>
+                <p class = "main-accent">Bartek</p>
+                <p>Nowak, PhD</p>
+              </div>
+              <div class="small-screen-title">
+                <p>Hello, I am <span class="main-accent">Bartek</span> Nowak</p>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-7 col-md-7 col-lg-4 profile">
+              <div class="row-circle">
+                <div class="circle row center-xs">
+                  <ul class="menu" style="--i:20deg;--d:130px">
+                    <li>
+                      <a href="https://github.com/bartlomiejnowak94" title="Github"><i class="fab fa-github"></i></a>
+                    </li>
+                    <li>
+                      <a href="https://www.linkedin.com/in/bart%C5%82omiej-nowak-950a99159/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                    <li>
+                      <a href="https://orcid.org/0000-0002-9208-2570" title="ORCID"><i class="ai ai-orcid"></i></a>
+                    </li>
+                    <li>
+                      <a href="https://www.scopus.com/authid/detail.uri?authorId=57208597387" title="Scopus"><i class="ai ai-scopus"></i></a>
+                    </li>
+                    <li>
+                      <a href="https://scholar.google.pl/citations?hl=pl&user=YAhsrssAAAAJ" title="Google-Scholar"><i class="ai ai-google-scholar"></i></a>
+                    </li>
+                    <li>
+                      <a href="https://www.researchgate.net/profile/Bartlomiej_Nowak6" title="Researchgate"><i class="ai ai-researchgate"></i></a>
+                    </li>
+                    <li>
+                      <a href="https://publons.com/researcher/3959264/bartomiej-nowak/" title="Publons"><i class="ai ai-publons"></i></a>
+                    </li>
+                  </ul>
                 </div>
             </div>
+          </div>
         </div>
     </section>
-    <!-- COMPANY -->
-    <section id="company">
-        <div class="container">
-            <div class="row center-xs center-sm center-md center-lg">
-                <!-- <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><i class="fas fa-home"></i> 503 A-1</li>
-                        <li><i class="fa fa-map"></i> Wybrzeże Wyspiańskiego 27 <br> 50-370 Wrocław, Poland</li>
-                    </ul>
-                </div> -->
-                <!-- <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <p><a href="https://wppt.pwr.edu.pl/"><img class="logo-index2" src="images/spirale_biale.svg" alt=""></a></p>
-                </div> -->
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <h4>CHECK Me</h4>
-                    <p>
-                        <a href="https://github.com/bartlomiejnowak94" title="Github"><i class="fab fa-github-square"></i></a>
-                        <a href="https://orcid.org/0000-0002-9208-2570" title="ORCID"><i class="ai ai-orcid-square"></i></a>
-                        <a href="https://www.scopus.com/authid/detail.uri?authorId=57208597387" title="Scopus"><i class="ai ai-scopus-square"></i></a>
-                        <a href="https://scholar.google.pl/citations?hl=pl&user=YAhsrssAAAAJ" title="Google-Scholar"><i class="ai ai-google-scholar-square"></i></a>
-                        <a href="https://www.researchgate.net/profile/Bartlomiej_Nowak6" title="Researchgate"><i class="ai ai-researchgate-square"></i></a>
-                        <a href="https://www.linkedin.com/in/bart%C5%82omiej-nowak-950a99159/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://publons.com/researcher/3959264/bartomiej-nowak/" title="Publons"><i class="ai ai-publons-square"></i></a>
-                    </p>
-                </div>
-            </div>
+    <section id="Publications" class="body-sections">
+      <div class="container">
+        <div class="section-head"> 
+          <i class="fa-solid fa-file fa-rotate-by"></i> <h1>Publications</h1>
         </div>
+        <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg ">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-1">
+              <p>07.2022</p>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">    
+              <div class="wizytowki">
+                  <p>Promoting discontinuous phase transitions by the quenched disorder within the multistate \(q\)-voter model</p>
+                  <p><span class="color-text">Bartłomiej Nowak</span>, Katarzyna Sznajd-Weron</p>
+                  <!-- <p>Scientific Reports 11, 6098</p> -->
+                  <p><a href="https://doi.org/10.1103/PhysRevE.106.014125"> <nobr><i class="ai ai-doi"></i> 10.1103/PhysRevE.106.014125</nobr></a></p>
+                  <p><a href="https://arxiv.org/abs/2106.11238"> <nobr><i class="ai ai-arxiv"></i> arXiv:2106.11238</nobr></a></p>
+              </div>
+          </div>
+        </div>
+        <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg ">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-1">
+              <p>05.2022</p>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">    
+              <div class="wizytowki">
+                  <p>The threshold model with anticonformity under random sequential updating</p>
+                  <p><span class="color-text">Bartłomiej Nowak</span>, Michel Grabisch,Katarzyna Sznajd-Weron</p>
+                  <!-- <p>Scientific Reports 11, 6098</p> -->
+                  <p><a href="https://doi.org/10.1103/PhysRevE.105.054314"> <nobr><i class="ai ai-doi"></i> 10.1103/PhysRevE.105.054314</nobr></a></p>
+                  <p><a href="https://arxiv.org/abs/2202.00653"> <nobr><i class="ai ai-arxiv"></i> arXiv:2202.00653</nobr></a></p>
+              </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <!-- FOOTER -->
-    <footer id="main-footer">
-        <div class="container">
-            <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="foot">
-                        <p>Copyright &copy; 2020 & Design: <a href="http://prac.im.pwr.wroc.pl/~bnowak/">Bartłomiej Nowak</a> | Powered by: <a href="http://flexboxgrid.com/">Flexboxgrid</a></p>
-                    </div>
-                </div>
-            </div>
+    <section id="Certificates" class="body-sections">
+      <div class="container">
+        <div class="section-head"> 
+          <i class="fa-solid fa-graduation-cap fa-rotate-by"></i> <h1>Certificates</h1>
         </div>
-    </footer>
-    <a href="#main-header" id="to-top-button" class="button-scroll"></a>
+        <div class="row center-xs center-sm center-md center-lg middle-xs middle-sm middle-md middle-lg ">
+          <div class="card">
+            <img class="img-icon" src="images/dcamp-sqr.svg" alt="datacamp-icon">
+            <div class="card-content">
+                <a href="docs/datacamp_object-oriented_programming_in_python.pdf"> Datacamp: Object-Oriented Programming in Python</a><br>
+                <span>Completed on 09.02.2023</span>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img-icon" src="images/dcamp-sqr.svg" alt="datacamp-icon">
+            <div class="card-content">
+                <a href="docs/datacamp_introduction_to_airflow_in_python.pdf"> Datacamp: Introduction to Airflow in Python</a><br>
+                <span>Completed on 05.02.2023</span>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img-icon" src="images/dcamp-sqr.svg" alt="datacamp-icon">
+            <div class="card-content">
+                <a href="docs/datacamp_introduction_to_power_bi.pdf"> Datacamp: Introduction to Power BI</a><br>
+                <span>Completed on 23.01.2023</span>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img-icon" src="images/dcamp-sqr.svg" alt="datacamp-icon">
+            <div class="card-content">
+                <a href="docs/datacamp_data_manipulation_in_sql.pdf"> Datacamp: Data Manipulation in SQL</a><br>
+                <span>Completed on 08.01.2023</span>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img-icon" src="images/kaggle-sqr.svg" alt="kaggle-icon">
+            <div class="card-content">
+                <a href="docs/kaggle_intro_to_machine_learning.png"> Kaggle: Intro to Machine Learning</a><br>
+                <span>Completed on 27.12.2022</span>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img-icon" src="images/kaggle-sqr.svg" alt="kaggle-icon">
+            <div class="card-content">
+                <a href="docs/kaggle_pandas.png"> Kaggle: Pandas</a><br>
+                <span>Completed on 19.12.2022</span>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img-icon" src="images/dcamp-sqr.svg" alt="datacamp-icon">
+            <div class="card-content">
+                <a href="docs/datacamp_python_data_science_toolbox_p2.pdf"> Datacamp: Python Data Science Toolbox (Part 2)</a><br>
+                <span>Completed on 16.12.2022</span> 
+            </div>
+          </div>
+          <div class="card">
+            <img class="img-icon" src="images/dcamp-sqr.svg" alt="datacamp-icon">
+            <div class="card-content">
+                <a href="docs/datacamp_python_data_science_toolbox_p1.pdf"> Datacamp: Python Data Science Toolbox (Part 1)</a><br>
+                <span>Completed on 14.12.2022</span> 
+            </div>
+          </div>
+          <div class="card">
+            <img class="img-icon" src="images/dcamp-sqr.svg" alt="datacamp-icon">
+            <div class="card-content">
+                <a href="docs/datacamp_intermediate_python.pdf"> Datacamp: Intermediate Python</a><br>
+                <span>Completed on 24.11.2022</span> 
+            </div>
+          </div>
+          <div class="card">
+            <img class="img-icon" src="images/dcamp-sqr.svg" alt="datacamp-icon">
+            <div class="card-content">
+                <a href="docs/datacamp_data_joining_sql.pdf"> Datacamp: Joining Data in SQL</a><br>
+                <span>Completed on 24.11.2022</span> 
+            </div>
+          </div>
+          <div class="card">
+            <img class="img-icon" src="images/dcamp-sqr.svg" alt="datacamp-icon">
+            <div class="card-content">
+                <a href="docs/datacamp_intermediate_sql.pdf"> Datacamp: Intermediate SQL</a><br>
+                <span>Completed on 23.11.2022</span> 
+            </div>
+          </div>
+          <div class="card">
+            <img class="img-icon" src="images/dcamp-sqr.svg" alt="datacamp-icon">
+            <div class="card-content">
+                <a href="docs/datacamp_introduction_sql.pdf"> Datacamp: Introduction to SQL</a><br>
+                <span>Completed on 22.11.2022</span> 
+            </div>
+          </div>
+          <div class="card">
+            <img class="img-icon" src="images/sekurak-sqr.svg" alt="sekurak-icon">
+            <div class="card-content">
+                <a href="docs/sekurak_szkolenie.pdf"> Sekurak: Nie daj się cyberzbójom 2.0</a><br>
+                <span>Completed on 14.09.2022</span> 
+            </div>
+          </div>
+          <div class="card">
+            <img class="img-icon" src="images/dcamp-sqr.svg" alt="datacamp-icon">
+            <div class="card-content">
+                <a href="docs/datacamp_introduction_python.pdf"> Datacamp: Introduction to Python</a><br>
+                <span>Completed on 11.02.2022</span> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Presentations" class="body-sections">
+      <div class="container">
+        <div class="section-head">
+          <i class="fa-solid fa-comments fa-rotate-by"></i> <h1>Presentations</h1>
+        </div>
+      </div>
+    </section>
 </body>
-</html>
