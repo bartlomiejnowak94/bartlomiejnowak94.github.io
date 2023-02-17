@@ -6,6 +6,7 @@ html, body{
     font-family: 'Aleo', serif;
     font-size: 17px;
     line-height: 1.5em;
+    scroll-behavior: smooth;
 }
 
 :root{
@@ -128,6 +129,12 @@ header{
     border-bottom: var(--main-color-white) 2px solid;
     border-top: var(--main-color-white) 2px solid;
 }
+
+/* .current{
+    color: var(--main-color-white);
+    border-bottom: var(--main-color-white) 2px solid;
+    border-top: var(--main-color-white) 2px solid;
+} */
 
 .toggle-button{
     position: absolute;
