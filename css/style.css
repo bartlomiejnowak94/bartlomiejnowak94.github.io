@@ -153,7 +153,7 @@ header{
     border-top: var(--main-color-white) 2px solid;
 }
 
-.current{
+.navbar-links li a.current{
     color: var(--main-color-white);
     border-bottom: var(--main-color-white) 2px solid;
     border-top: var(--main-color-white) 2px solid;
