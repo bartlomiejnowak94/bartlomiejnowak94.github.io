@@ -9,6 +9,12 @@ html, body{
     scroll-behavior: smooth;
 }
 
+/* * {
+    background: #000 !important;
+    color: #0f0 !important;
+    outline: solid #f00 1px !important;
+  } */
+
 :root{
     --main-color-theme: #8AA29E;
     --main-color-white: #fff;
