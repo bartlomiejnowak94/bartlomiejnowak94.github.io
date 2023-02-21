@@ -22,8 +22,27 @@ html, body{
     --main-color-accent: #DB5461;
 }
 
-.container{
-    margin:auto;
+@media screen and  (max-width: 767px){
+    .container{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+
+@media screen and  (min-width: 75em){
+    .container{
+        width: 71rem;
+        margin: auto;
+    }
+}
+
+.row{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
 }
 
 .img-fluid {
@@ -150,7 +169,7 @@ header{
     margin-top: 0.7rem;
 }
 
-@media (max-width: 767px){
+@media screen and  (max-width: 767px){
     .toggle-button{
         display: flex;
     }
@@ -222,18 +241,36 @@ header{
 
 .small-screen-title{
     display: none;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+}
+
+.small-screen-title-content{
+    text-align: center;
+    font-size: 30px;
 }
 
 .big-screen-title{
-    display: inherit;
+    display: flex;
+    position: relative;
+    margin-right: 20px;
+}
+
+.big-screen-title-content{
     text-align: right;
     font-size: 40px;
+}
+
+.row-cricle{
+    position: relative;
+    display: flex;
+    margin-right: 30px;
 }
 
 @media screen and (max-width: 767px){
     .small-screen-title{
         display: inherit;
-        font-size: 30px;
     }
     .big-screen-title{
         display: none;
@@ -242,26 +279,10 @@ header{
         padding-top: 50px;
         min-height: 500px;
     }
-    .row-circle{
-        box-sizing: border-box;
-        display: -ms-flexbox;
-        display: -webkit-box;
-        display: flex;
-        -ms-flex: 0 1 auto;
-        -webkit-box-flex: 0;
-        flex: 0 1 auto;
-        -ms-flex-direction: row;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        flex-direction: row;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        margin-right: -1rem;
-        margin-left: -1rem;
-        -ms-flex-pack: center;
-        -webkit-box-pack: center;
+    .row-cricle{
+        width: 100%;
+        margin: auto;
         justify-content: center;
-        text-align: center;
     }
 }
 
@@ -354,7 +375,6 @@ header{
 .section-head{
     display: flex;
     align-items: center;
-    max-width: 80%;
     margin-bottom: 20px;
 }
 
@@ -367,15 +387,36 @@ header{
     margin-right: 40px;
 }
 
-.wizytowki{
+.pub-column-left{
+    width: 2%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.pub-column-right{
     text-align: left;
     margin: 20px;
     border-left: 2px solid var(--main-color-white);
     padding-left: 10px;
+    width: 80%;
 }
 
-.wizytowki p{
+.pub-column-right p{
     margin: 0;
+}
+
+@media screen and (max-width: 767px){
+    .section-head{
+        width: 100%;
+        justify-content: center;
+    }
+    .pub-column-left{
+        width: 100%;
+    }
+    .pub-column-right{
+        width: 100%;
+    }
 }
 
 /* Cards */
@@ -421,7 +462,7 @@ header{
     position: relative;
     margin-bottom: 20px;
     margin-top: 20px;
-    width: 90%;
+    width: 95%;
     border-left: var(--main-color-white) 2px solid;
     border-bottom: var(--main-color-white) 2px solid;
     overflow: hidden;
@@ -472,6 +513,5 @@ header{
     color: #F1EDEE;
 }
 .foot{
-    width: 95%;
-    padding-left: 10px;
+    justify-content: center;
 }
