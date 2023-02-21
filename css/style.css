@@ -153,7 +153,7 @@ header{
     border-top: var(--main-color-white) 2px solid;
 }
 
-.navbar-links li a.current{
+.current{
     color: var(--main-color-white);
     border-bottom: var(--main-color-white) 2px solid;
     border-top: var(--main-color-white) 2px solid;
@@ -355,20 +355,20 @@ header{
     transition: color 1s ease;
 }
 
-.body-sections:nth-child(odd){
+.body-sections:nth-child(n){
     background: var(--main-color-black);
     color: var(--main-color-white);
 }
-.body-sections:nth-child(even){
+.body-sections:nth-child(2n){
     background: var(--main-color-white);
     color: var(--main-color-black);
 }
 
-.body-sections:nth-child(odd) a:hover{
+.body-sections:nth-child(n) a:hover{
     color: var(--main-color-white);
 }
 
-.body-sections:nth-child(even) a:hover{
+.body-sections:nth-child(2n) a:hover{
     color: var(--main-color-black);
 }
 
